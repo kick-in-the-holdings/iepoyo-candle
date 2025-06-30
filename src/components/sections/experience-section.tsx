@@ -7,103 +7,91 @@ import { GradientButton } from '@/components/ui/gradient-button'
 import { SectionHeading } from '@/components/ui/section-heading'
 
 const ExperienceSection = () => {
-  const experiences = [
-    {
-      title: 'アニマルキャンドル',
-      description: 'かわいい動物の形をしたキャンドルを作ります。うさぎ、ねこ、くまなど、お好きな動物を選んで、世界に一つだけのキャンドルに。',
-      duration: '約90分',
-      price: '¥3,500',
-      features: ['初心者OK', '材料込み', 'お持ち帰り'],
-      icon: '🐰',
-      gradient: 'from-soft-pink to-pastel-coral',
-    },
-    {
-      title: 'アロマワックス',
-      description: '宮古島の天然素材を使用したアロマキャンドル。ティアレやプルメリアの香りで、南国の思い出を形に残しましょう。',
-      duration: '約60分',
-      price: '¥2,800',
-      features: ['天然素材', '香り選択', '癒し効果'],
-      icon: '🌺',
-      gradient: 'from-pale-lavender to-mint-green',
-    },
-    {
-      title: 'ジェルキャンドル',
-      description: '透明なジェルキャンドルに、宮古島の砂や貝殻を閉じ込めて。まるで海の中のような幻想的なキャンドルが完成します。',
-      duration: '約75分',
-      price: '¥4,200',
-      features: ['宮古島の素材', '透明感', '幻想的'],
-      icon: '🌊',
-      gradient: 'from-miyako-blue to-pale-lavender',
-    },
-  ]
+  const experienceInfo = {
+    highlights: [
+      '雨の日でも安心♪',
+      '市街地から車で5分',
+      '駐車場完備',
+      '6歳～99歳まで参加OK'
+    ],
+    details: {
+      duration: '1時間30分',
+      ageRange: '6歳～99歳',
+      location: '〒906-0008 沖縄県宮古島市平良荷川取206-3',
+      features: [
+        { label: 'キャンドル制作', value: '1個まで' },
+        { label: '当日持ち帰り', value: 'あり' },
+        { label: 'レクチャー', value: 'スタッフがサポート' },
+        { label: '写真サービス', value: 'プラン料金込み' }
+      ]
+    }
+  }
 
   return (
     <section className="py-20 bg-cream-white">
       <div className="container mx-auto px-4">
         <SectionHeading
-          title="3つの体験コース"
-          subtitle="あなたの好みや時間に合わせて、お好きなコースをお選びください"
+          title="ゆめかわキャンドル作り体験"
+          subtitle="手ぶらで楽しめる、宮古島の思い出作り"
           gradient
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {experiences.map((experience, index) => (
-            <AnimatedCard
-              key={experience.title}
-              delay={index * 0.2}
-              className="text-center relative overflow-hidden"
-            >
-              {/* 背景グラデーション */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${experience.gradient} opacity-5`} />
-              
-              <div className="relative z-10">
-                {/* アイコン */}
-                <div className="text-6xl mb-4">{experience.icon}</div>
-                
-                {/* タイトル */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  {experience.title}
-                </h3>
-                
-                {/* 説明 */}
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {experience.description}
-                </p>
-                
-                {/* 詳細情報 */}
-                <div className="space-y-3 mb-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-500">所要時間</span>
-                    <span className="font-semibold text-gray-900">{experience.duration}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-500">料金</span>
-                    <span className="font-bold text-miyako-blue text-xl">{experience.price}</span>
-                  </div>
+        {/* おすすめポイント */}
+        <AnimatedCard className="mb-12 max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">おすすめポイント</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {experienceInfo.highlights.map((point, index) => (
+                <div key={index} className="flex items-center justify-center p-3 bg-soft-pink/10 rounded-lg">
+                  <span className="text-sm font-medium text-gray-700 text-center">★ {point}</span>
                 </div>
-                
-                {/* 特徴タグ */}
-                <div className="flex flex-wrap gap-2 justify-center mb-6">
-                  {experience.features.map((feature) => (
-                    <span
-                      key={feature}
-                      className="px-3 py-1 bg-pastel-coral/20 text-gray-700 text-xs rounded-full"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-                
-                {/* 予約ボタン */}
-                <GradientButton className="w-full">
-                  このコースを予約
-                </GradientButton>
+              ))}
+            </div>
+          </div>
+        </AnimatedCard>
+
+        {/* 体験詳細 */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* 基本情報 */}
+          <AnimatedCard>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">体験詳細</h3>
+            <div className="space-y-4">
+              <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                <span className="text-gray-600">所要時間</span>
+                <span className="font-semibold text-gray-900">{experienceInfo.details.duration}</span>
               </div>
-            </AnimatedCard>
-          ))}
+              <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                <span className="text-gray-600">対象年齢</span>
+                <span className="font-semibold text-gray-900">{experienceInfo.details.ageRange}</span>
+              </div>
+              <div className="py-2">
+                <span className="text-gray-600 block mb-2">集合・体験場所</span>
+                <span className="text-sm text-gray-900">{experienceInfo.details.location}</span>
+              </div>
+            </div>
+          </AnimatedCard>
+
+          {/* プランの特徴 */}
+          <AnimatedCard delay={0.2}>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">プランの特徴</h3>
+            <div className="space-y-4">
+              {experienceInfo.details.features.map((feature, index) => (
+                <div key={index} className="flex justify-between items-start py-2 border-b border-gray-100">
+                  <span className="text-gray-600">{feature.label}</span>
+                  <span className="text-sm text-gray-900 text-right max-w-xs">{feature.value}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 p-4 bg-pastel-coral/10 rounded-lg">
+              <p className="text-sm text-gray-700">
+                <strong>写真撮影：</strong>作業中の撮影はスタッフにお声がけください<br/>
+                <strong>追加制作：</strong>当日追加で制作も可能です（型により料金が異なります）
+              </p>
+            </div>
+          </AnimatedCard>
         </div>
 
-        {/* セクション下部CTA */}
+        {/* 予約CTA */}
         <motion.div
           className="text-center mt-12"
           initial={{ opacity: 0, y: 20 }}
@@ -112,10 +100,10 @@ const ExperienceSection = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <p className="text-gray-600 mb-6">
-            どのコースも手ぶらでOK！必要な材料はすべてご用意しています。
+            手ぶらでOK！スタッフがしっかりサポートするので初心者でも安心です。
           </p>
           <GradientButton size="lg" variant="accent">
-            全コース詳細を見る
+            プラン詳細をみる
           </GradientButton>
         </motion.div>
       </div>
