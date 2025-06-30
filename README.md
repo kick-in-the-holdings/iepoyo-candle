@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# iepoyo candle 🕯️
 
-## Getting Started
+宮古島キャンドル体験・販売サイト
 
-First, run the development server:
+## 店舗情報
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**iepoyo candle (イエポヨキャンドル)**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **住所**: 〒906-0000 沖縄県宮古島市平良字下里000-0
+- **電話番号**: 0980-00-0000
+- **営業時間**: 10:00 - 18:00（最終受付 16:30）
+- **定休日**: 不定休（事前予約制）
+- **駐車場**: 無料駐車場完備（5台）
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## アクセス
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 宮古空港から車で約15分
+- 平良市街地から車で約10分
+- 平良市街地のホテルから無料送迎あり（要事前予約・前日まで）
 
-## Learn More
+## 体験内容
 
-To learn more about Next.js, take a look at the following resources:
+### キャンドル作り体験
+- **料金**: ¥3,500〜
+- **所要時間**: 約90分
+- **定員**: 1〜8名
+- **対象年齢**: 6歳以上
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 特徴
+- 宮古島の美しい海をイメージしたオリジナルキャンドル作り
+- アロマオイルでお好みの香りをプラス
+- 作品はその日にお持ち帰りいただけます
+- 雨の日や台風の日でも楽しめる屋内アクティビティ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 予約・購入
 
-## Deploy on Vercel
+- **体験予約**: [じゃらん](https://www.jalan.net/kankou/spt_guide000000229021/?screenId=OUW3701&rootCd=3)
+- **商品購入**: [STORES](https://stores.jp/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## SNS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Instagram: #宮古島キャンドル #miyakocandle でタグ付けお願いします！
+
