@@ -1,0 +1,24 @@
+{
+  "name": "IEPOYO CANDLE - 宮古島ゆめかわキャンドル体験・販売",
+  "short_name": "IEPOYO CANDLE",
+  "description": "宮古島でゆめかわいキャンドル作り体験。インスタ映え間違いなしのアロマキャンドルを作ろう！",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF7FA",
+  "theme_color": "#F4C2C1",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
