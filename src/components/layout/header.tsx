@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -23,7 +24,20 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* ロゴ */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-3">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Image
+                src="/images/logo-sm.png"
+                alt="IEPOYO CANDLE"
+                width={40}
+                height={40}
+                className="w-10 h-10"
+                priority
+              />
+            </motion.div>
             <motion.div
               className="text-2xl font-bold bg-gradient-to-r from-miyako-blue to-soft-pink bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
