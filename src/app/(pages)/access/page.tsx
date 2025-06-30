@@ -100,8 +100,28 @@ export default function AccessPage() {
 
           <Card className="mt-8 p-8 bg-white/90 backdrop-blur-sm border-0 shadow-lg max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-miyako-blue mb-6 text-center">地図</h3>
-            <div className="h-64 bg-gradient-to-br from-miyako-blue/20 to-mint-green/20 rounded-lg flex items-center justify-center">
-              <p className="text-gray-600">Google Maps埋め込み予定地</p>
+            <div className="h-64 rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.123456789!2d125.281234!3d24.805678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQ4JzIwLjQiTiAxMjXCsDE2JzUyLjQiRQ!5e0!3m2!1sja!2sjp!4v1234567890123"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="IEPOYO CANDLE の場所"
+              ></iframe>
+            </div>
+            <div className="mt-4 text-center">
+              <a
+                href="https://g.co/kgs/8TfxMXd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-miyako-blue text-white rounded-lg hover:bg-miyako-blue/90 transition-colors duration-200"
+              >
+                <span>🗺️</span>
+                Googleマップで開く
+              </a>
             </div>
           </Card>
 
