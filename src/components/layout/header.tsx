@@ -34,7 +34,7 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              宮古島キャンドル
+              IEPOYO CANDLE
             </motion.div>
           </Link>
 

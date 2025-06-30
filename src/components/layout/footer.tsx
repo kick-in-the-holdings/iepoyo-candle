@@ -46,7 +46,7 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="text-2xl font-bold bg-gradient-to-r from-miyako-blue to-soft-pink bg-clip-text text-transparent mb-4">
-              宮古島キャンドル
+              IEPOYO CANDLE
             </div>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
               宮古島の美しい海をイメージしたゆめかわいキャンドル作り体験で、
@@ -106,7 +106,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              © {currentYear} 宮古島キャンドル. All rights reserved.
+              © {currentYear} IEPOYO CANDLE. All rights reserved.
             </motion.p>
             <motion.div
               className="flex space-x-4"

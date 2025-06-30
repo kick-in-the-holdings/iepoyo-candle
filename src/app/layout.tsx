@@ -14,12 +14,12 @@ const mPlusRounded = M_PLUS_Rounded_1c({
 });
 
 export const metadata: Metadata = {
-  title: "宮古島キャンドル体験・販売 | ゆめかわいキャンドル作り",
-  description: "宮古島で特別なキャンドル作り体験をしませんか。ゆめかわいデザインのアロマキャンドルでインスタ映え間違いなし！雨の日や台風の日でも楽しめる室内アクティビティです。",
+  title: "IEPOYO CANDLE | 宮古島ゆめかわキャンドル体験・販売",
+  description: "宮古島のIEPOYO CANDLEで特別なキャンドル作り体験をしませんか。ゆめかわいデザインのアロマキャンドルでインスタ映え間違いなし！雨の日や台風の日でも楽しめる室内アクティビティです。",
   keywords: "宮古島,キャンドル体験,アロマキャンドル,ゆめかわ,インスタ映え,室内アクティビティ,デート,沖縄観光",
   openGraph: {
-    title: "宮古島キャンドル体験・販売",
-    description: "宮古島で特別なキャンドル作り体験をしませんか",
+    title: "IEPOYO CANDLE | 宮古島ゆめかわキャンドル体験・販売",
+    description: "宮古島のIEPOYO CANDLEで特別なキャンドル作り体験をしませんか",
     type: "website",
     locale: "ja_JP",
   },

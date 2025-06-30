@@ -21,47 +21,101 @@ export default function ExperiencePage() {
             />
           </div>
 
-          <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-2">
-            <Card className="p-8 bg-white/90 backdrop-blur-sm border-0 shadow-lg">
-              <h3 className="text-2xl font-bold text-miyako-blue mb-6">体験内容</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-soft-pink rounded-full mt-2"></div>
-                  <p className="text-gray-700">宮古島の海をイメージした美しいカラーキャンドル作り</p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-8">
+              {/* マーブルキャンドル */}
+              <Card className="p-6 bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="h-32 bg-gradient-to-br from-soft-pink to-pale-lavender rounded-lg mb-4 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full border-2 border-white/50"></div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-soft-pink rounded-full mt-2"></div>
-                  <p className="text-gray-700">アロマオイルでお好みの香りをプラス</p>
+                <h3 className="text-lg font-bold text-miyako-blue mb-2">マーブルキャンドル</h3>
+                <p className="text-gray-600 text-sm mb-3">美しいマーブル模様のキャンドル</p>
+                <div className="text-2xl font-bold text-miyako-blue">¥2,500</div>
+              </Card>
+
+              {/* 貝殻キャンドル */}
+              <Card className="p-6 bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="h-32 bg-gradient-to-br from-miyako-blue to-mint-green rounded-lg mb-4 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full border-2 border-white/50"></div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-soft-pink rounded-full mt-2"></div>
-                  <p className="text-gray-700">作品はその日にお持ち帰りいただけます</p>
+                <h3 className="text-lg font-bold text-miyako-blue mb-2">貝殻キャンドル</h3>
+                <p className="text-gray-600 text-sm mb-3">宮古島の貝殻を使ったキャンドル</p>
+                <div className="text-2xl font-bold text-miyako-blue">¥3,000</div>
+              </Card>
+
+              {/* 球体キャンドル */}
+              <Card className="p-6 bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="h-32 bg-gradient-to-br from-pale-lavender to-pastel-coral rounded-lg mb-4 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full border-2 border-white/50"></div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-soft-pink rounded-full mt-2"></div>
-                  <p className="text-gray-700">雨の日でも安心の屋内アクティビティ</p>
+                <h3 className="text-lg font-bold text-miyako-blue mb-2">球体キャンドル</h3>
+                <p className="text-gray-600 text-sm mb-3">ころんと可愛い球体のキャンドル</p>
+                <div className="text-2xl font-bold text-miyako-blue">¥3,500</div>
+              </Card>
+
+              {/* 球体キャンドル(big) */}
+              <Card className="p-6 bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="h-32 bg-gradient-to-br from-gold-highlight to-pastel-coral rounded-lg mb-4 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-white/30 backdrop-blur-sm rounded-full border-2 border-white/50"></div>
+                </div>
+                <h3 className="text-lg font-bold text-miyako-blue mb-2">球体キャンドル(big)</h3>
+                <p className="text-gray-600 text-sm mb-3">大きめサイズの球体キャンドル</p>
+                <div className="text-2xl font-bold text-miyako-blue">¥5,000</div>
+              </Card>
+            </div>
+
+            <Card className="p-8 bg-white/90 backdrop-blur-sm border-0 shadow-lg mb-8">
+              <h3 className="text-2xl font-bold text-miyako-blue mb-6 text-center">オプション</h3>
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-soft-pink to-pale-lavender rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-white font-bold">🌸</span>
+                  </div>
+                  <h4 className="font-bold text-miyako-blue mb-2">ラメ・金箔</h4>
+                  <p className="text-sm text-gray-600 mb-2">キラキラ輝くラメや金箔でデコレーション</p>
+                  <div className="text-lg font-bold text-miyako-blue">+¥500</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-mint-green to-miyako-blue rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-white font-bold">🌺</span>
+                  </div>
+                  <h4 className="font-bold text-miyako-blue mb-2">エッセンシャルオイル</h4>
+                  <p className="text-sm text-gray-600 mb-2">お好みの香りをプラス</p>
+                  <div className="text-lg font-bold text-miyako-blue">+¥500</div>
                 </div>
               </div>
             </Card>
 
             <Card className="p-8 bg-white/90 backdrop-blur-sm border-0 shadow-lg">
-              <h3 className="text-2xl font-bold text-miyako-blue mb-6">料金・詳細</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">料金</span>
-                  <span className="text-xl font-bold text-miyako-blue">¥3,500〜</span>
+              <h3 className="text-2xl font-bold text-miyako-blue mb-6">体験詳細</h3>
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">所要時間</span>
+                    <span className="font-semibold">約90分</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">定員</span>
+                    <span className="font-semibold">1〜8名</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">対象年齢</span>
+                    <span className="font-semibold">6歳以上</span>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">所要時間</span>
-                  <span className="font-semibold">約90分</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">定員</span>
-                  <span className="font-semibold">1〜8名</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">対象年齢</span>
-                  <span className="font-semibold">6歳以上</span>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-soft-pink rounded-full mt-2"></div>
+                    <p className="text-gray-700 text-sm">作品はその日にお持ち帰りいただけます</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-soft-pink rounded-full mt-2"></div>
+                    <p className="text-gray-700 text-sm">雨の日でも安心の屋内アクティビティ</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-soft-pink rounded-full mt-2"></div>
+                    <p className="text-gray-700 text-sm">初心者の方でも安心してお楽しみいただけます</p>
+                  </div>
                 </div>
               </div>
             </Card>

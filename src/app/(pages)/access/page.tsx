@@ -13,7 +13,7 @@ export default function AccessPage() {
           <div className="text-center mb-12">
             <SectionHeading 
               title="アクセス"
-              subtitle="宮古島キャンドル工房へのご案内"
+              subtitle="IEPOYO CANDLE工房へのご案内"
             />
           </div>
 
