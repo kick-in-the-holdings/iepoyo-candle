@@ -26,9 +26,9 @@ const Footer = () => {
     {
       title: 'SNS',
       links: [
-        { href: '#', label: 'Instagram' },
-        { href: '#', label: 'Twitter' },
-        { href: '#', label: 'Facebook' },
+        { href: 'https://www.instagram.com/explore/tags/宮古島キャンドル/', label: 'Instagram' },
+        { href: 'https://www.jalan.net/kankou/spt_guide000000229021/', label: 'じゃらん予約' },
+        { href: 'https://stores.jp/', label: 'STORES' },
       ],
     },
   ]
@@ -72,12 +72,23 @@ const Footer = () => {
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-gray-600 hover:text-miyako-blue transition-colors duration-200"
-                    >
-                      {link.label}
-                    </Link>
+                    {link.href.startsWith('http') ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-600 hover:text-miyako-blue transition-colors duration-200"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-sm text-gray-600 hover:text-miyako-blue transition-colors duration-200"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -104,18 +115,9 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Link
-                href="/privacy"
-                className="text-sm text-gray-600 hover:text-miyako-blue transition-colors duration-200"
-              >
-                プライバシーポリシー
-              </Link>
-              <Link
-                href="/terms"
-                className="text-sm text-gray-600 hover:text-miyako-blue transition-colors duration-200"
-              >
-                利用規約
-              </Link>
+              <span className="text-sm text-gray-500">
+                #宮古島キャンドル #miyakocandle
+              </span>
             </motion.div>
           </div>
         </div>
