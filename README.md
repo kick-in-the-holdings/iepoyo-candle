@@ -40,4 +40,3 @@
 ## SNS
 
 Instagram: #宮古島キャンドル #miyakocandle でタグ付けお願いします！
-
