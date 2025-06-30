@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, M_PLUS_Rounded_1c } from "next/font/google";
+import { getAssetUrl } from '@/lib/paths';
 import "./globals.css";
 
 const inter = Inter({
@@ -19,15 +20,15 @@ export const metadata: Metadata = {
   keywords: "宮古島,キャンドル体験,アロマキャンドル,ゆめかわ,インスタ映え,室内アクティビティ,デート,沖縄観光",
   icons: {
     icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: getAssetUrl("/favicon-16x16.png"), sizes: "16x16", type: "image/png" },
+      { url: getAssetUrl("/favicon-32x32.png"), sizes: "32x32", type: "image/png" },
+      { url: getAssetUrl("/favicon-96x96.png"), sizes: "96x96", type: "image/png" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: getAssetUrl("/apple-touch-icon.png"), sizes: "180x180", type: "image/png" },
     ],
   },
-  manifest: "/manifest.json",
+  manifest: getAssetUrl("/manifest.json"),
   openGraph: {
     title: "IEPOYO CANDLE | 宮古島ゆめかわキャンドル体験・販売",
     description: "宮古島のIEPOYO CANDLEで特別なキャンドル作り体験をしませんか",
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     images: [
       {
-        url: "/images/logo-lg.png",
+        url: getAssetUrl("/images/logo-lg.png"),
         width: 300,
         height: 300,
         alt: "IEPOYO CANDLE ロゴ",

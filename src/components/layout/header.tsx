@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import { getAssetUrl } from '@/lib/paths'
 
 import { Button } from '@/components/ui/button'
 import { GradientButton } from '@/components/ui/gradient-button'
@@ -30,7 +31,7 @@ const Header = () => {
               transition={{ duration: 0.2 }}
             >
               <Image
-                src="/images/logo-sm.png"
+                src={getAssetUrl("/images/logo-sm.png")}
                 alt="IEPOYO CANDLE"
                 width={40}
                 height={40}
