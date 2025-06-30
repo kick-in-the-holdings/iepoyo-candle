@@ -114,7 +114,7 @@ export default function AccessPage() {
             </div>
             <div className="mt-4 text-center">
               <a
-                href="https://g.co/kgs/8TfxMXd"
+                href="https://g.co/kgs/P4fcQcQ"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-miyako-blue text-white rounded-lg hover:bg-miyako-blue/90 transition-colors duration-200"
