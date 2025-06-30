@@ -53,9 +53,7 @@ const Footer = () => {
               特別な思い出を作りませんか。
             </p>
             <div className="text-sm text-gray-600">
-              <p>📍 沖縄県宮古島市</p>
-              <p>📞 0980-XX-XXXX</p>
-              <p>📧 info@miyako-candle.com</p>
+              <p>📍 〒906-0008<br/>沖縄県宮古島市平良荷川取206-3</p>
             </div>
           </motion.div>
 

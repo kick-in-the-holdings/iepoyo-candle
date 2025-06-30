@@ -27,7 +27,7 @@ export default function AccessPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-miyako-blue mb-1">住所</h4>
-                    <p className="text-gray-700">〒906-0000<br/>沖縄県宮古島市平良字下里000-0</p>
+                    <p className="text-gray-700">〒906-0008<br/>沖縄県宮古島市平良荷川取206-3</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -35,8 +35,8 @@ export default function AccessPage() {
                     <span className="text-white text-xs">📞</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-miyako-blue mb-1">電話番号</h4>
-                    <p className="text-gray-700">0980-00-0000</p>
+                    <h4 className="font-bold text-miyako-blue mb-1">お問い合わせ</h4>
+                    <p className="text-gray-700">事前予約制<br/>じゃらんまたはSTORESより</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
