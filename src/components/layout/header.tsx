@@ -19,12 +19,7 @@ const Header = () => {
   ]
 
   return (
-    <motion.header
-      className="sticky top-0 z-50 bg-cream-white/95 backdrop-blur-sm border-b border-soft-pink/20"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-    >
+    <header className="sticky top-0 z-50 bg-cream-white/95 backdrop-blur-sm border-b border-soft-pink/20">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* ロゴ */}
@@ -114,7 +109,7 @@ const Header = () => {
           </nav>
         </motion.div>
       </div>
-    </motion.header>
+    </header>
   )
 }
 
