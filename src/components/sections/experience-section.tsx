@@ -31,8 +31,8 @@ const ExperienceSection = () => {
     <section className="py-20 bg-cream-white">
       <div className="container mx-auto px-4">
         <SectionHeading
-          title="ゆめかわキャンドル作り体験"
-          subtitle="手ぶらで楽しめる、宮古島の思い出作り"
+          title="心ときめく、自分だけのキャンドル作り体験💖"
+          subtitle="宮古島の美しい思い出を、世界にひとつのキャンドルに込めてみませんか？初めての方でも安心して楽しめるよう、スタッフがしっかりサポートします✨"
           gradient
         />
 
@@ -41,7 +41,12 @@ const ExperienceSection = () => {
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">おすすめポイント</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {experienceInfo.highlights.map((point, index) => (
+              {[
+                '雨の日も楽しめるインドア体験☔',
+                '市街地から好アクセス🚗',
+                '無料駐車場を完備',
+                'お子様から大人まで大歓迎！'
+              ].map((point, index) => (
                 <div key={index} className="flex items-center justify-center p-3 bg-soft-pink/10 rounded-lg">
                   <span className="text-sm font-medium text-gray-700 text-center">★ {point}</span>
                 </div>
@@ -100,10 +105,10 @@ const ExperienceSection = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <p className="text-gray-600 mb-6">
-            手ぶらでOK！スタッフがしっかりサポートするので初心者でも安心です。
+            手ぶらでOK！スタッフがしっかりサポートするので、初めての方でも安心です。
           </p>
           <GradientButton size="lg" variant="accent">
-            プラン詳細をみる
+            体験プランの詳細を見る
           </GradientButton>
         </motion.div>
       </div>

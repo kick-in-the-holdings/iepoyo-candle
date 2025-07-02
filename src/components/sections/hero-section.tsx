@@ -44,11 +44,11 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <span className="block">宮古島で</span>
+            <span className="block">宮古島で、"きゅん"とする想い出づくり💖</span>
             <span className="block bg-gradient-to-r from-gold-highlight to-mint-green bg-clip-text text-transparent">
-              ゆめかわ
+            世界にひとつの「ゆめかわキャンドル」
             </span>
-            <span className="block">キャンドル体験</span>
+            <span className="block">を灯そう✨</span>
           </motion.h1>
 
           {/* サブタイトル */}
@@ -58,11 +58,11 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           >
-            美しい宮古ブルーにインスパイアされた、
+            宮古島のキラキラの海をぎゅっと閉じ込めた、
             <br className="hidden sm:block" />
-            あなただけの特別なキャンドルを作りませんか？
+            宝物みたいなキャンドル、作ってみない？
             <br className="hidden sm:block" />
-            雨の日でも楽しめる、インスタ映え間違いなしの体験です✨
+            初めてでも、不器用さんでも大丈夫！かわいく作れるヒミツ、教えちゃう😉
           </motion.p>
 
           {/* CTAボタン */}
@@ -73,10 +73,10 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           >
             <GradientButton size="lg" className="min-w-48">
-              🕯️ 体験を予約する
+              🕯️ さっそく体験してみる
             </GradientButton>
             <GradientButton variant="secondary" size="lg" className="min-w-48">
-              🛒 商品を見る
+              🛒 どんな作品があるか見る
             </GradientButton>
           </motion.div>
 
@@ -89,19 +89,19 @@ const HeroSection = () => {
           >
             <div className="flex items-center gap-2">
               <span className="text-gold-highlight">☀️</span>
-              <span className="text-sm">雨天OK</span>
+              <span className="text-sm">雨でもOK!</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-gold-highlight">📸</span>
-              <span className="text-sm">インスタ映え</span>
+              <span className="text-sm">映え確実</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-gold-highlight">💕</span>
-              <span className="text-sm">カップル人気</span>
+              <span className="text-sm">カップルに人気</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-gold-highlight">🎨</span>
-              <span className="text-sm">手ぶらOK</span>
+              <span className="text-sm">手ぶらでOK</span>
             </div>
           </motion.div>
         </div>

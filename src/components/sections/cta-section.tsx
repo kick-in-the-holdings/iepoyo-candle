@@ -46,13 +46,13 @@ const CTASection = () => {
         >
           {/* メインメッセージ */}
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            あなただけの特別な
+            さあ、あなただけの特別な
             <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-gold-highlight to-mint-green bg-clip-text text-transparent">
-              キャンドル体験
+              キャンドル作り体験
             </span>
             <br className="hidden sm:block" />
-            をお楽しみください
+            をはじめよう
           </h2>
 
           <motion.p
@@ -62,11 +62,11 @@ const CTASection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            宮古島の美しい自然にインスパイアされた空間で、
+            宮古島の美しい自然に包まれた空間で、
             <br className="hidden sm:block" />
-            世界に一つだけのキャンドルを作る特別な時間。
+            世界にひとつの宝物を作る、心ときめく時間。
             <br className="hidden sm:block" />
-            雨の日でも、晴れの日でも、いつでもお待ちしています。
+            最高の思い出作りを、私たちが全力でサポートします！
           </motion.p>
 
           {/* 特典情報 */}
@@ -78,20 +78,20 @@ const CTASection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <h3 className="text-xl font-bold text-white mb-4">
-              🎁 今なら特典付き！
+              🎁 ご予約特典
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-white/90">
               <div className="text-center">
-                <div className="text-2xl mb-2">📦</div>
-                <div className="text-sm">無料ギフト包装</div>
+                <div className="text-2xl mb-2">🎁</div>
+                <div className="text-sm">ギフトラッピング無料</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl mb-2">📸</div>
-                <div className="text-sm">制作過程の写真プレゼント</div>
+                <div className="text-sm">記念フォトサービス</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl mb-2">🌺</div>
-                <div className="text-sm">プルメリアのプチギフト</div>
+                <div className="text-sm">プチギフトプレゼント</div>
               </div>
             </div>
           </motion.div>
@@ -105,27 +105,12 @@ const CTASection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <GradientButton size="lg" variant="secondary" className="min-w-64">
-              🕯️ 今すぐ体験を予約する
-            </GradientButton>
-            <GradientButton size="lg" variant="accent" className="min-w-64">
-              📞 電話で相談する
+              <a href="https://www.jalan.net/kankou/spt_guide000000229021/?screenId=OUW3701&rootCd=3" target="_blank" rel="noopener noreferrer">
+                🕯️ Webで予約する
+              </a>
             </GradientButton>
           </motion.div>
 
-          {/* 連絡先情報 */}
-          <motion.div
-            className="mt-8 text-white/80"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          >
-            <p className="mb-2">📞 0980-XX-XXXX</p>
-            <p className="mb-2">⏰ 営業時間：9:00〜18:00（定休日：火曜日）</p>
-            <p className="text-sm">
-              ※悪天候でアクティビティが中止になった際のご案内も承ります
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </section>

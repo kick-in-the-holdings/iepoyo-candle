@@ -31,8 +31,8 @@ export default function ExperiencePage() {
                   <Image 
                     src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/309281a1-c74e-4922-49b5-c4fa71942600/square500"
                     alt="マーブルキャンドル"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="rounded-lg"
                   />
                 </div>
@@ -47,8 +47,8 @@ export default function ExperiencePage() {
                   <Image 
                     src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/23aea446-aa19-4e5a-96e7-25c40e991300/square500"
                     alt="貝殻キャンドル"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="rounded-lg"
                   />
                 </div>
@@ -63,8 +63,8 @@ export default function ExperiencePage() {
                   <Image 
                     src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/ae9e5e34-1a81-4b5d-0c4c-2c55c8a87000/square500"
                     alt="球体キャンドル"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="rounded-lg"
                   />
                 </div>
@@ -79,8 +79,8 @@ export default function ExperiencePage() {
                   <Image 
                     src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/c7c04e12-24ea-4c22-457d-5f5e7fb01b00/square500"
                     alt="球体キャンドル(big)"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="rounded-lg"
                   />
                 </div>
@@ -119,8 +119,8 @@ export default function ExperiencePage() {
                   <Image 
                     src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/386e5c1f-7841-495b-a15d-72b68c84ed00/public"
                     alt="キャンドル作り体験の様子"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                   />
                 </div>
               </div>

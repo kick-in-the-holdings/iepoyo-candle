@@ -63,8 +63,8 @@ const PopularProductsSection = () => {
     <section className="py-20 bg-gradient-to-br from-pastel-coral/10 to-pale-lavender/10">
       <div className="container mx-auto px-4">
         <SectionHeading
-          title="人気商品"
-          subtitle="実際に体験で作られた商品の中から、特に人気の高いデザインを厳選しました"
+          title="人気の作品たちをご紹介✨"
+          subtitle="体験ではこんなに素敵なキャンドルが作れます！特に人気のデザインを集めてみました。"
           gradient
         />
 
@@ -152,10 +152,10 @@ const PopularProductsSection = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <p className="text-gray-600 mb-6">
-            すべての商品は体験で実際に作ることができます。完成品の購入も可能です。
+            もちろん、体験でご自身で作ることも、完成品をご購入いただくことも可能です。
           </p>
           <GradientButton size="lg" variant="secondary">
-            オンラインショップを見る
+            オンラインショップで完成品も見てみる
           </GradientButton>
         </motion.div>
       </div>

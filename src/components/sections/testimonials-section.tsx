@@ -79,8 +79,8 @@ const TestimonialsSection = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <SectionHeading
-          title="お客様の声"
-          subtitle="実際に体験された皆様からの嬉しいお声をご紹介します"
+          title="体験された方のリアルな声をご紹介"
+          subtitle="「楽しかった！」「また来たい！」たくさんの嬉しいお言葉、ありがとうございます！"
           gradient
         />
 
@@ -152,12 +152,12 @@ const TestimonialsSection = () => {
         >
           <div className="text-4xl mb-4">📸</div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            あなたの作品もシェアしませんか？
+            あなたの素敵な作品も、ぜひシェアしてくださいね！
           </h3>
           <p className="text-gray-600 mb-6">
-            ハッシュタグ <span className="font-semibold text-miyako-blue">#宮古島キャンドル</span> をつけて投稿すると、
+            ハッシュタグ <span className="font-semibold text-miyako-blue">#宮古島キャンドル</span> をつけて投稿していただくと、
             <br className="hidden sm:block" />
-            こちらのサイトでご紹介させていただく場合があります✨
+            こちらのサイトでご紹介させていただくことも✨
           </p>
           <div className="flex flex-wrap justify-center gap-2">
             <span className="px-3 py-1 bg-white/80 text-gray-700 text-sm rounded-full">

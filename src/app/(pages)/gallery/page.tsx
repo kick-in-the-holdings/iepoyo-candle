@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { MainLayout } from '@/components/layout/main-layout'
 import { Card } from '@/components/ui/card'
 import { SectionHeading } from '@/components/ui/section-heading'
@@ -8,66 +9,66 @@ import { Badge } from '@/components/ui/badge'
 const galleryItems = [
   {
     id: 1,
-    title: 'ハート型ピンクキャンドル',
-    category: 'カップル',
+    title: 'お客様作品①',
+    category: '女性',
     season: '通年',
-    color: 'bg-gradient-to-br from-soft-pink to-pale-lavender'
+    image: 'https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/8f6bf529-94d7-41a1-8430-c3d849c4b100/square500'
   },
   {
     id: 2,
-    title: '宮古ブルーグラデーション',
+    title: 'お客様作品②',
     category: '女性',
     season: '夏',
-    color: 'bg-gradient-to-br from-miyako-blue to-mint-green'
+    image: 'https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/e428628a-8680-4d95-f79a-cc1feb42cf00/square500'
   },
   {
     id: 3,
-    title: 'サンセットオレンジ',
+    title: 'お客様作品③',
     category: '女性',
-    season: '夏',
-    color: 'bg-gradient-to-br from-pastel-coral to-gold-highlight'
+    season: '通年',
+    image: 'https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/dc2db58b-f5ee-40ef-be45-c27c01ad0f00/square500'
   },
   {
     id: 4,
-    title: 'ラベンダーキューブ',
+    title: 'お客様作品④',
     category: '女性',
     season: '春',
-    color: 'bg-gradient-to-br from-pale-lavender to-soft-pink'
+    image: 'https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/8285aedc-e87e-477f-b90e-e3896be3bd00/square500'
   },
   {
     id: 5,
-    title: 'トロピカルミックス',
-    category: 'グループ',
+    title: 'お客様作品⑤',
+    category: 'カップル',
     season: '夏',
-    color: 'bg-gradient-to-br from-mint-green to-miyako-blue'
+    image: 'https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/1e7ffd51-f36b-4a5b-72b8-18a0abc7b000/square500'
   },
   {
     id: 6,
-    title: 'パステルレインボー',
+    title: 'お客様作品⑥',
     category: '女性',
     season: '通年',
-    color: 'bg-gradient-to-br from-soft-pink via-pale-lavender to-mint-green'
+    image: 'https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/91ea90aa-d38b-4387-0f6e-a67914ae4700/square500'
   },
   {
     id: 7,
-    title: 'ペアキャンドル',
+    title: 'お客様作品⑦',
     category: 'カップル',
     season: '通年',
-    color: 'bg-gradient-to-br from-miyako-blue to-soft-pink'
+    image: 'https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/82718755-69e4-45fd-27b7-036404836300/square500'
   },
   {
     id: 8,
-    title: 'ウェディングホワイト',
-    category: 'カップル',
+    title: 'お客様作品⑧',
+    category: 'グループ',
     season: '通年',
-    color: 'bg-gradient-to-br from-cream-white to-pale-lavender'
+    image: 'https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/23aea446-aa19-4e5a-96e7-25c40e991300/square500'
   },
   {
     id: 9,
-    title: 'オーシャンブルー',
+    title: 'お客様作品⑨',
     category: '女性',
     season: '夏',
-    color: 'bg-gradient-to-br from-miyako-blue to-pastel-coral'
+    image: 'https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/3563bd5d-f560-46c0-21e3-7c7a71896500/square500'
   }
 ]
 
@@ -77,7 +78,7 @@ const seasons = ['全て', '春', '夏', '通年']
 export default function GalleryPage() {
   return (
     <MainLayout>
-      <div className="min-h-screen bg-gradient-to-br from-cream-white via-pastel-coral to-pale-lavender py-16">
+      <div className="min-h-screen bg-cream-white py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <SectionHeading 
@@ -115,13 +116,13 @@ export default function GalleryPage() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {galleryItems.map((item) => (
                 <Card key={item.id} className="overflow-hidden bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  <div className={`h-48 ${item.color} flex items-center justify-center relative`}>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    <div className="relative z-10">
-                      <div className="w-20 h-20 bg-white/30 backdrop-blur-sm rounded-full border-2 border-white/50 flex items-center justify-center">
-                        <div className="w-12 h-12 bg-white/40 rounded-full"></div>
-                      </div>
-                    </div>
+                  <div className="aspect-square relative">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
                   <div className="p-4">
                     <h3 className="font-bold text-miyako-blue mb-2">{item.title}</h3>

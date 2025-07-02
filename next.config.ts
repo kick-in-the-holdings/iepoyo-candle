@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
+    domains: ['imagedelivery.net'],
   },
   assetPrefix: process.env.NODE_ENV === 'production' ? '/iepoyo-candle/' : '',
   basePath: process.env.NODE_ENV === 'production' ? '/iepoyo-candle' : '',
