@@ -95,9 +95,9 @@ export default function ExperiencePage() {
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-soft-pink to-pale-lavender rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-white font-bold">🌸</span>
+                    <span className="text-white font-bold">✨</span>
                   </div>
-                  <h4 className="font-bold text-miyako-blue mb-2">✨️</h4>
+                  <h4 className="font-bold text-miyako-blue mb-2">ラメ・金箔</h4>
                   <p className="text-sm text-gray-600 mb-2">キラキラ輝くラメや金箔でデコレーション</p>
                   <div className="text-lg font-bold text-miyako-blue">+¥500</div>
                 </div>

@@ -5,6 +5,7 @@ import { GoogleReviewsSection } from '@/components/sections/google-reviews-secti
 import { HeroSection } from '@/components/sections/hero-section'
 import { PopularProductsSection } from '@/components/sections/popular-products-section'
 import { TestimonialsSection } from '@/components/sections/testimonials-section'
+import { LLMOContent } from '@/components/seo/llmo-content'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <TestimonialsSection />
       <GoogleReviewsSection />
       <CTASection />
+      <LLMOContent />
     </MainLayout>
   )
 }
