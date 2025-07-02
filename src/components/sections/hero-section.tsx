@@ -45,7 +45,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <span className="block">宮古島で、"きゅん"とする想い出づくり💖</span>
+            <span className="block">宮古島で、&ldquo;きゅん&rdquo;とする想い出づくり💖</span>
             <span className="block bg-gradient-to-r from-gold-highlight to-mint-green bg-clip-text text-transparent">
             世界にひとつの「ゆめかわキャンドル」
             </span>

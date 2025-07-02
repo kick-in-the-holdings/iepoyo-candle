@@ -122,7 +122,7 @@ const GoogleReviewsSection = () => {
 
                     {/* コメント */}
                     <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                      "{review.comment}"
+                      &ldquo;{review.comment}&rdquo;
                     </p>
 
                     {/* ユーザー情報 */}
