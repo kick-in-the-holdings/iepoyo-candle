@@ -114,6 +114,16 @@ export default function ExperiencePage() {
 
             <Card className="p-8 bg-white/90 backdrop-blur-sm border-0 shadow-lg">
               <h3 className="text-2xl font-bold text-miyako-blue mb-6">体験詳細</h3>
+              <div className="mb-6">
+                <div className="aspect-video relative rounded-lg overflow-hidden">
+                  <Image 
+                    src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/386e5c1f-7841-495b-a15d-72b68c84ed00/square450"
+                    alt="キャンドル作り体験の様子"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
