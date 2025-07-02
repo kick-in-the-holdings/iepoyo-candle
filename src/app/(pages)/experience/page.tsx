@@ -59,8 +59,14 @@ export default function ExperiencePage() {
 
               {/* 球体キャンドル */}
               <Card className="p-6 bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="h-32 bg-gradient-to-br from-pale-lavender to-pastel-coral rounded-lg mb-4 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full border-2 border-white/50"></div>
+                <div className="h-40 mb-4 relative">
+                  <Image 
+                    src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/ae9e5e34-1a81-4b5d-0c4c-2c55c8a87000/square500"
+                    alt="球体キャンドル"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                  />
                 </div>
                 <h3 className="text-lg font-bold text-miyako-blue mb-2">球体キャンドル</h3>
                 <p className="text-gray-600 text-sm mb-3">ころんと可愛い球体のキャンドル</p>
