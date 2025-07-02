@@ -27,7 +27,7 @@ export default function ExperiencePage() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-8">
               {/* マーブルキャンドル */}
               <Card className="p-6 bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="h-40 mb-4 relative">
+                <div className="aspect-square mb-4 relative">
                   <Image 
                     src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/309281a1-c74e-4922-49b5-c4fa71942600/square500"
                     alt="マーブルキャンドル"
@@ -43,7 +43,7 @@ export default function ExperiencePage() {
 
               {/* 貝殻キャンドル */}
               <Card className="p-6 bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="h-40 mb-4 relative">
+                <div className="aspect-square mb-4 relative">
                   <Image 
                     src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/23aea446-aa19-4e5a-96e7-25c40e991300/square500"
                     alt="貝殻キャンドル"
@@ -59,7 +59,7 @@ export default function ExperiencePage() {
 
               {/* 球体キャンドル */}
               <Card className="p-6 bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="h-40 mb-4 relative">
+                <div className="aspect-square mb-4 relative">
                   <Image 
                     src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/ae9e5e34-1a81-4b5d-0c4c-2c55c8a87000/square500"
                     alt="球体キャンドル"
@@ -75,7 +75,7 @@ export default function ExperiencePage() {
 
               {/* 球体キャンドル(big) */}
               <Card className="p-6 bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="h-40 mb-4 relative">
+                <div className="aspect-square mb-4 relative">
                   <Image 
                     src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/c7c04e12-24ea-4c22-457d-5f5e7fb01b00/square500"
                     alt="球体キャンドル(big)"
@@ -97,7 +97,7 @@ export default function ExperiencePage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-soft-pink to-pale-lavender rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-white font-bold">🌸</span>
                   </div>
-                  <h4 className="font-bold text-miyako-blue mb-2">ラメ・金箔</h4>
+                  <h4 className="font-bold text-miyako-blue mb-2">✨️</h4>
                   <p className="text-sm text-gray-600 mb-2">キラキラ輝くラメや金箔でデコレーション</p>
                   <div className="text-lg font-bold text-miyako-blue">+¥500</div>
                 </div>
