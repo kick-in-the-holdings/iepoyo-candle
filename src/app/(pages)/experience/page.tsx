@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 import { MainLayout } from '@/components/layout/main-layout'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -25,8 +27,14 @@ export default function ExperiencePage() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-8">
               {/* マーブルキャンドル */}
               <Card className="p-6 bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="h-32 bg-gradient-to-br from-soft-pink to-pale-lavender rounded-lg mb-4 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full border-2 border-white/50"></div>
+                <div className="h-40 mb-4 relative">
+                  <Image 
+                    src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/309281a1-c74e-4922-49b5-c4fa71942600/square500"
+                    alt="マーブルキャンドル"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                  />
                 </div>
                 <h3 className="text-lg font-bold text-miyako-blue mb-2">マーブルキャンドル</h3>
                 <p className="text-gray-600 text-sm mb-3">美しいマーブル模様のキャンドル</p>
@@ -35,8 +43,14 @@ export default function ExperiencePage() {
 
               {/* 貝殻キャンドル */}
               <Card className="p-6 bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="h-32 bg-gradient-to-br from-miyako-blue to-mint-green rounded-lg mb-4 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full border-2 border-white/50"></div>
+                <div className="h-40 mb-4 relative">
+                  <Image 
+                    src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/23aea446-aa19-4e5a-96e7-25c40e991300/square500"
+                    alt="貝殻キャンドル"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                  />
                 </div>
                 <h3 className="text-lg font-bold text-miyako-blue mb-2">貝殻キャンドル</h3>
                 <p className="text-gray-600 text-sm mb-3">宮古島の貝殻を使ったキャンドル</p>
