@@ -117,7 +117,7 @@ export default function ExperiencePage() {
               <div className="mb-6">
                 <div className="aspect-video relative rounded-lg overflow-hidden">
                   <Image 
-                    src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/386e5c1f-7841-495b-a15d-72b68c84ed00/square450"
+                    src="https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/386e5c1f-7841-495b-a15d-72b68c84ed00/public"
                     alt="キャンドル作り体験の様子"
                     layout="fill"
                     objectFit="cover"
