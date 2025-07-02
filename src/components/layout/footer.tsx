@@ -11,7 +11,7 @@ const Footer = () => {
       title: 'サービス',
       links: [
         { href: '/experience', label: 'キャンドル体験' },
-        { href: '/shop', label: 'オンラインショップ' },
+        // { href: '/shop', label: 'オンラインショップ' },
         { href: '/gallery', label: 'ギャラリー' },
       ],
     },
@@ -28,7 +28,7 @@ const Footer = () => {
       links: [
         { href: 'https://www.instagram.com/explore/tags/宮古島キャンドル/', label: 'Instagram' },
         { href: 'https://www.jalan.net/kankou/spt_guide000000229021/', label: 'じゃらん予約' },
-        { href: 'https://stores.jp/', label: 'STORES' },
+        // { href: 'https://stores.jp/', label: 'STORES' },
       ],
     },
   ]
@@ -46,7 +46,7 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="text-2xl font-bold bg-gradient-to-r from-miyako-blue to-soft-pink bg-clip-text text-transparent mb-4">
-              IEPOYO CANDLE
+              iepoyo candle
             </div>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
               宮古島の美しい海をイメージしたゆめかわいキャンドル作り体験で、
@@ -104,7 +104,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              © {currentYear} IEPOYO CANDLE. All rights reserved.
+              © {currentYear} iepoyo candle. All rights reserved.
             </motion.p>
             <motion.div
               className="flex space-x-4"

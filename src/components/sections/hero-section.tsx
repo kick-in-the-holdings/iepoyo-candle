@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 import { GradientButton } from '@/components/ui/gradient-button'
 
@@ -73,11 +74,15 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           >
             <GradientButton size="lg" className="min-w-48">
-              🕯️ さっそく体験してみる
+              <a href="https://www.jalan.net/kankou/spt_guide000000229021/?screenId=OUW3701&rootCd=3" target="_blank" rel="noopener noreferrer">
+                🕯️ さっそく体験してみる
+              </a>
             </GradientButton>
-            <GradientButton variant="secondary" size="lg" className="min-w-48">
-              🛒 どんな作品があるか見る
-            </GradientButton>
+            <Link href="/gallery">
+              <GradientButton variant="secondary" size="lg" className="min-w-48">
+                🛒 どんな作品があるか見る
+              </GradientButton>
+            </Link>
           </motion.div>
 
           {/* 特徴ポイント */}

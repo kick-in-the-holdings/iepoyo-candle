@@ -13,7 +13,7 @@ export default function AccessPage() {
           <div className="text-center mb-12">
             <SectionHeading 
               title="アクセス"
-              subtitle="IEPOYO CANDLEへのご案内"
+              subtitle="iepoyo candleへのご案内"
             />
           </div>
 
@@ -109,7 +109,7 @@ export default function AccessPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="IEPOYO CANDLE の場所"
+                title="iepoyo candle の場所"
               ></iframe>
             </div>
             <div className="mt-4 text-center">

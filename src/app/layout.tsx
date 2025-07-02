@@ -16,8 +16,8 @@ const mPlusRounded = M_PLUS_Rounded_1c({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://kick-in-the-holdings.github.io/iepoyo-candle' : 'http://localhost:3000'),
-  title: "IEPOYO CANDLE | 宮古島ゆめかわキャンドル体験・販売",
-  description: "宮古島のIEPOYO CANDLEで特別なキャンドル作り体験をしませんか。ゆめかわいデザインのアロマキャンドルでインスタ映え間違いなし！雨の日や台風の日でも楽しめる室内アクティビティです。",
+  title: "iepoyo candle | 宮古島ゆめかわキャンドル体験・販売",
+  description: "宮古島のiepoyo candleで特別なキャンドル作り体験をしませんか。ゆめかわいデザインのアロマキャンドルでインスタ映え間違いなし！雨の日や台風の日でも楽しめる室内アクティビティです。",
   keywords: "宮古島,キャンドル体験,アロマキャンドル,ゆめかわ,インスタ映え,室内アクティビティ,デート,沖縄観光",
   icons: {
     icon: [
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   },
   manifest: getAssetUrl("/manifest.json"),
   openGraph: {
-    title: "IEPOYO CANDLE | 宮古島ゆめかわキャンドル体験・販売",
-    description: "宮古島のIEPOYO CANDLEで特別なキャンドル作り体験をしませんか",
+    title: "iepoyo candle | 宮古島ゆめかわキャンドル体験・販売",
+    description: "宮古島のiepoyo candleで特別なキャンドル作り体験をしませんか",
     type: "website",
     locale: "ja_JP",
     url: process.env.NODE_ENV === 'production' ? 'https://kick-in-the-holdings.github.io/iepoyo-candle' : 'http://localhost:3000',
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
         url: "https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/5653da66-e4c5-41e4-3485-1d96f8b0e800/square500",
         width: 500,
         height: 500,
-        alt: "IEPOYO CANDLE サムネイル",
+        alt: "iepoyo candle サムネイル",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IEPOYO CANDLE | 宮古島ゆめかわキャンドル体験・販売",
-    description: "宮古島のIEPOYO CANDLEで特別なキャンドル作り体験をしませんか",
+    title: "iepoyo candle | 宮古島ゆめかわキャンドル体験・販売",
+    description: "宮古島のiepoyo candleで特別なキャンドル作り体験をしませんか",
     images: ["https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/5653da66-e4c5-41e4-3485-1d96f8b0e800/square500"],
   },
 };

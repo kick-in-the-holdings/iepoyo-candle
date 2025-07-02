@@ -15,7 +15,7 @@ const Header = () => {
   const navItems = [
     { href: '/', label: 'ホーム' },
     { href: '/experience', label: '体験予約' },
-    { href: '/shop', label: 'ショップ' },
+    // { href: '/shop', label: 'ショップ' },
     { href: '/gallery', label: 'ギャラリー' },
     { href: '/access', label: 'アクセス' },
   ]
@@ -32,7 +32,7 @@ const Header = () => {
             >
               <Image
                 src={getAssetUrl("/images/logo-sm.png")}
-                alt="IEPOYO CANDLE"
+                alt="iepoyo candle"
                 width={40}
                 height={40}
                 className="w-10 h-10"
@@ -43,7 +43,7 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              IEPOYO CANDLE
+              iepoyo candle
             </motion.div>
           </Link>
 

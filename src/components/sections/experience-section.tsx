@@ -12,11 +12,11 @@ const ExperienceSection = () => {
       '雨の日でも安心♪',
       '市街地から車で5分',
       '駐車場完備',
-      '6歳～99歳まで参加OK'
+      '6歳以上参加OK'
     ],
     details: {
       duration: '1時間30分',
-      ageRange: '6歳～99歳',
+      ageRange: '6歳以上',
       location: '〒906-0008 沖縄県宮古島市平良荷川取206-3',
       features: [
         { label: 'キャンドル制作', value: '1個まで' },
