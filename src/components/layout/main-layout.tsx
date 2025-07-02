@@ -1,5 +1,6 @@
 import { Footer } from './footer'
 import { Header } from './header'
+import { Chatbot } from '../chatbot/chatbot'
 
 interface MainLayoutProps {
   children: React.ReactNode
@@ -11,6 +12,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
+      <Chatbot />
     </div>
   )
 }
