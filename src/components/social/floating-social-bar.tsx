@@ -90,26 +90,32 @@ export function FloatingSocialBar() {
 
       </div>
 
-      {/* モバイル版 - 下部固定 */}
-      <div className="md:hidden fixed bottom-20 left-0 right-0 z-40 bg-white/90 backdrop-blur-sm border-t border-gray-200">
-        <div className="flex justify-center items-center gap-6 py-3 px-4">
-          {socialLinks.map((social) => (
+      {/* モバイル版 - 右端固定 */}
+      <div className="md:hidden fixed right-4 bottom-32 z-40 space-y-4">
+        {socialLinks.map((social, index) => (
+          <motion.div
+            key={social.id}
+            className="relative"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+          >
+            {/* パルスアニメーション */}
+            <div className={`absolute inset-0 rounded-full ${social.color} animate-pulse opacity-30 pointer-events-none`} />
+            
+            {/* ソーシャルボタン */}
             <motion.a
-              key={social.id}
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-1"
+              className={`relative block w-12 h-12 rounded-full ${social.color} shadow-lg flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 z-10`}
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className={`w-12 h-12 rounded-full ${social.color} shadow-md flex items-center justify-center text-white`}>
-                <social.icon size={24} color="white" />
-              </div>
-              <span className="text-xs font-medium text-gray-700">{social.name}</span>
+              <social.icon size={24} color="white" />
             </motion.a>
-          ))}
-          
-        </div>
+          </motion.div>
+        ))}
       </div>
     </>
   )

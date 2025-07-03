@@ -19,7 +19,7 @@ const ExperienceSection = () => {
       ageRange: '6歳以上',
       location: '〒906-0008 沖縄県宮古島市平良荷川取206-3',
       features: [
-        { label: 'キャンドル制作', value: '1個まで' },
+        { label: 'キャンドル制作', value: 'お好みのデザインで' },
         { label: '当日持ち帰り', value: 'あり' },
         { label: 'レクチャー', value: 'スタッフがサポート' },
         { label: '写真サービス', value: 'プラン料金込み' }
