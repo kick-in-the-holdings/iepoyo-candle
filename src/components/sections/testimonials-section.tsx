@@ -98,7 +98,7 @@ const TestimonialsSection = () => {
               
               {/* 評価 */}
               <div className="flex items-center mb-4">
-                <div className="flex text-gold-highlight">
+                <div className="flex text-yellow-400">
                   {'★'.repeat(testimonial.rating)}
                   {'☆'.repeat(5 - testimonial.rating)}
                 </div>

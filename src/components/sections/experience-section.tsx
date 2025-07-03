@@ -19,7 +19,6 @@ const ExperienceSection = () => {
       ageRange: '6歳以上',
       location: '〒906-0008 沖縄県宮古島市平良荷川取206-3',
       features: [
-        { label: 'キャンドル制作', value: 'お好みのデザインで' },
         { label: '当日持ち帰り', value: 'あり' },
         { label: 'レクチャー', value: 'スタッフがサポート' },
         { label: '写真サービス', value: 'プラン料金込み' }
@@ -48,7 +47,7 @@ const ExperienceSection = () => {
                 'お子様から大人まで大歓迎！'
               ].map((point, index) => (
                 <div key={index} className="flex items-center justify-center p-3 bg-soft-pink/10 rounded-lg">
-                  <span className="text-sm font-medium text-gray-700 text-center">★ {point}</span>
+                  <span className="text-sm font-medium text-gray-700 text-center"><span className="text-yellow-400">★</span> {point}</span>
                 </div>
               ))}
             </div>
