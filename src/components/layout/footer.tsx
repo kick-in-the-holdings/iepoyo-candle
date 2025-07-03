@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { IconInstagram } from '../icons/icon-instagram'
+import { IconLine } from '../icons/icon-line'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -26,7 +28,8 @@ const Footer = () => {
     {
       title: 'SNS',
       links: [
-        { href: 'https://www.instagram.com/explore/tags/宮古島キャンドル/', label: 'Instagram' },
+        { href: 'https://www.instagram.com/p/DLWm5PryCVh/', label: 'Instagram' },
+        { href: 'https://lin.ee/PhCo4lv', label: 'LINE' },
         { href: 'https://www.jalan.net/kankou/spt_guide000000229021/', label: 'じゃらん予約' },
         // { href: 'https://stores.jp/', label: 'STORES' },
       ],
@@ -107,7 +110,7 @@ const Footer = () => {
               © {currentYear} iepoyo candle. All rights reserved.
             </motion.p>
             <motion.div
-              className="flex space-x-4"
+              className="flex items-center gap-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -116,6 +119,28 @@ const Footer = () => {
               <span className="text-sm text-gray-500">
                 #宮古島キャンドル #miyakocandle
               </span>
+              
+              {/* SNSアイコン */}
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://www.instagram.com/p/DLWm5PryCVh/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-8 h-8 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-full hover:scale-110 transition-transform duration-300"
+                  title="Instagram"
+                >
+                  <IconInstagram size={16} color="white" />
+                </a>
+                <a
+                  href="https://lin.ee/PhCo4lv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-8 h-8 bg-green-500 rounded-full hover:scale-110 transition-transform duration-300"
+                  title="LINE"
+                >
+                  <IconLine size={16} color="white" />
+                </a>
+              </div>
             </motion.div>
           </div>
         </div>
