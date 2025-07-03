@@ -9,7 +9,7 @@ import { SectionHeading } from '@/components/ui/section-heading'
 
 export default function ExperiencePage() {
   const handleBooking = () => {
-    window.open('https://www.jalan.net/kankou/spt_guide000000229021/?screenId=OUW3701&rootCd=3', '_blank')
+    window.open('https://lin.ee/PhCo4lv', '_blank')
   }
 
   return (
@@ -142,7 +142,7 @@ export default function ExperiencePage() {
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-soft-pink rounded-full mt-2"></div>
-                    <p className="text-gray-700 text-sm">作品はその日にお持ち帰りいただけます</p>
+                    <p className="text-gray-700 text-sm">作品は翌日お受け取り、または郵送（送料はお客様負担）</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-soft-pink rounded-full mt-2"></div>
@@ -162,10 +162,10 @@ export default function ExperiencePage() {
               onClick={handleBooking}
               className="bg-gradient-to-r from-miyako-blue to-pale-lavender hover:scale-105 transform transition-all duration-300 text-white px-12 py-4 text-lg rounded-full shadow-lg"
             >
-              じゃらんで予約する
+              公式LINEで予約する
             </Button>
             <p className="mt-4 text-gray-600 text-sm">
-              ※予約はじゃらんのサイトで承っております
+              ※予約は公式LINEで承っております
             </p>
           </div>
         </div>

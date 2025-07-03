@@ -49,9 +49,9 @@ const HeroSection = () => {
           >
             <span className="block">宮古島で、&ldquo;きゅん&rdquo;とする想い出づくり💖</span>
             <span className="block bg-gradient-to-r from-gold-highlight to-mint-green bg-clip-text text-transparent">
-            世界にひとつの「ゆめかわキャンドル」
+            世界に1つだけの可愛いキャンドル作り体験で、
             </span>
-            <span className="block">を灯そう✨</span>
+            <span className="block">宮古島の思い出を“カタチ”に残しませんか？🕯️🌺💎</span>
           </motion.h1>
 
           {/* サブタイトル */}
@@ -76,7 +76,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           >
             <GradientButton size="lg" className="min-w-48">
-              <a href="https://www.jalan.net/kankou/spt_guide000000229021/?screenId=OUW3701&rootCd=3" target="_blank" rel="noopener noreferrer">
+              <a href="https://lin.ee/PhCo4lv" target="_blank" rel="noopener noreferrer">
                 🕯️ さっそく体験してみる
               </a>
             </GradientButton>

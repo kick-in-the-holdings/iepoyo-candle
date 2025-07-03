@@ -30,7 +30,7 @@ const Footer = () => {
       links: [
         { href: 'https://www.instagram.com/p/DLWm5PryCVh/', label: 'Instagram' },
         { href: 'https://lin.ee/PhCo4lv', label: 'LINE' },
-        { href: 'https://www.jalan.net/kankou/spt_guide000000229021/', label: 'じゃらん予約' },
+        // { href: 'https://www.jalan.net/kankou/spt_guide000000229021/', label: 'じゃらん予約' },
         // { href: 'https://stores.jp/', label: 'STORES' },
       ],
     },

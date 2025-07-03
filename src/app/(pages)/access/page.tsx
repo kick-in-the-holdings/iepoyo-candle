@@ -36,7 +36,7 @@ export default function AccessPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-miyako-blue mb-1">お問い合わせ</h4>
-                    <p className="text-gray-700">事前予約制<br/>じゃらんまたはSTORESより</p>
+                    <p className="text-gray-700">インスタと公式LINE</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -45,7 +45,7 @@ export default function AccessPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-miyako-blue mb-1">営業時間</h4>
-                    <p className="text-gray-700">10:00 - 18:00<br/>（最終受付 16:30）</p>
+                    <p className="text-gray-700">11:00 - 22:00</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
