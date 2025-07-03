@@ -40,8 +40,8 @@ export function FloatingSocialBar() {
 
   return (
     <>
-      {/* デスクトップ版 - 右側固定 */}
-      <div className="hidden md:block fixed right-4 top-1/2 -translate-y-1/2 z-40 space-y-4">
+      {/* デスクトップ版 - 右上固定 */}
+      <div className="hidden md:block fixed right-4 top-20 z-40 space-y-4">
         {socialLinks.map((social) => (
           <motion.div
             key={social.id}
@@ -90,8 +90,8 @@ export function FloatingSocialBar() {
 
       </div>
 
-      {/* モバイル版 - 右端固定 */}
-      <div className="md:hidden fixed right-4 bottom-32 z-40 space-y-4">
+      {/* モバイル版 - 右上固定 */}
+      <div className="md:hidden fixed right-4 top-24 z-40 space-y-4">
         {socialLinks.map((social, index) => (
           <motion.div
             key={social.id}
