@@ -4,6 +4,7 @@ import { ExperienceSection } from '@/components/sections/experience-section'
 import { GoogleReviewsSection } from '@/components/sections/google-reviews-section'
 import { HeroSection } from '@/components/sections/hero-section'
 import { PopularProductsSection } from '@/components/sections/popular-products-section'
+import { SnsFollowSection } from '@/components/sections/sns-follow-section'
 import { TestimonialsSection } from '@/components/sections/testimonials-section'
 import { LLMOContent } from '@/components/seo/llmo-content'
 
@@ -15,6 +16,7 @@ export default function Home() {
       <PopularProductsSection />
       <TestimonialsSection />
       <GoogleReviewsSection />
+      <SnsFollowSection />
       <CTASection />
       <LLMOContent />
     </MainLayout>
