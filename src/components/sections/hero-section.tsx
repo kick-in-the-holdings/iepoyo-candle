@@ -82,7 +82,7 @@ const HeroSection = () => {
             </GradientButton>
             <Link href="/gallery">
               <GradientButton variant="secondary" size="lg" className="min-w-48">
-                🛒 どんな作品があるか見る
+                ギャラリーをみる
               </GradientButton>
             </Link>
           </motion.div>

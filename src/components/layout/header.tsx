@@ -62,9 +62,11 @@ const Header = () => {
 
           {/* CTA ボタン */}
           <div className="hidden md:block">
-            <GradientButton size="sm">
-              今すぐ予約
-            </GradientButton>
+            <a href="https://lin.ee/PhCo4lv" target="_blank" rel="noopener noreferrer">
+              <GradientButton size="sm">
+                今すぐ予約
+              </GradientButton>
+            </a>
           </div>
 
           {/* モバイルメニューボタン */}
@@ -116,9 +118,11 @@ const Header = () => {
               </Link>
             ))}
             <div className="px-4 pt-2">
-              <GradientButton size="sm" className="w-full">
-                今すぐ予約
-              </GradientButton>
+              <a href="https://lin.ee/PhCo4lv" target="_blank" rel="noopener noreferrer" className="block">
+                <GradientButton size="sm" className="w-full">
+                  今すぐ予約
+                </GradientButton>
+              </a>
             </div>
           </nav>
         </motion.div>
