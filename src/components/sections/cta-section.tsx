@@ -105,8 +105,8 @@ const CTASection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <GradientButton size="lg" variant="secondary" className="min-w-64">
-              <a href="https://www.jalan.net/kankou/spt_guide000000229021/?screenId=OUW3701&rootCd=3" target="_blank" rel="noopener noreferrer">
-                🕯️ Webで予約する
+              <a href="https://lin.ee/PhCo4lv" target="_blank" rel="noopener noreferrer">
+                🕯️ LINEで予約する
               </a>
             </GradientButton>
           </motion.div>

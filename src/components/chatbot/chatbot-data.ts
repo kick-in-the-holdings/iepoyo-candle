@@ -192,12 +192,12 @@ export const chatbotDatabase: Record<string, ChatResponse> = {
   },
 
   reservation_info: {
-    text: "ご予約について詳しくご説明します😉\n\n⏰ **営業時間**\n10:00〜18:00（最終受付16:30）\n\n📅 **予約方法**\n事前予約制となっております\nじゃらんからご予約をお願いします\n\n🎯 **所要時間**\n約90分\n\n👥 **定員**\n1〜8名",
+    text: "ご予約について詳しくご説明します😉\n\n⏰ **営業時間**\n10:00〜18:00（最終受付16:30）\n\n📅 **予約方法**\n事前予約制となっております\nLINEからご予約をお願いします\n\n🎯 **所要時間**\n約90分\n\n👥 **定員**\n1〜8名",
     type: "options",
     options: [
       {
         id: "reservation_link",
-        text: "じゃらんで予約する",
+        text: "LINEで予約する",
         response: "reservation_link"
       },
       {
@@ -214,11 +214,11 @@ export const chatbotDatabase: Record<string, ChatResponse> = {
   },
 
   reservation_link: {
-    text: "じゃらんで簡単にご予約いただけます！",
+    text: "LINEで簡単にご予約いただけます！",
     type: "link",
     link: {
-      url: "https://www.jalan.net/kankou/spt_guide000000229021/?screenId=OUW3701&rootCd=3",
-      text: "じゃらんで予約する",
+      url: "https://lin.ee/PhCo4lv",
+      text: "LINEで予約する",
       external: true
     }
   },
@@ -307,12 +307,12 @@ export const chatbotDatabase: Record<string, ChatResponse> = {
   },
 
   contact: {
-    text: "直接のお問い合わせについて📞\n\n現在、お電話でのお問い合わせは承っておりません。\nご予約・お問い合わせは**じゃらん**からお願いいたします。\n\nご不便をおかけして申し訳ございません🙏",
+    text: "直接のお問い合わせについて📞\n\n現在、お電話でのお問い合わせは承っておりません。\nご予約・お問い合わせは**LINE**からお願いいたします。\n\nご不便をおかけして申し訳ございません🙏",
     type: "options",
     options: [
       {
         id: "reservation_link",
-        text: "じゃらんで問い合わせ",
+        text: "LINEで問い合わせ",
         response: "reservation_link"
       },
       {

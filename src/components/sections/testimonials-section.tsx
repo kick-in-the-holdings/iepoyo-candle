@@ -155,14 +155,16 @@ const TestimonialsSection = () => {
             あなたの素敵な作品も、ぜひシェアしてくださいね！
           </h3>
           <p className="text-gray-600 mb-6">
-            ハッシュタグ <span className="font-semibold text-miyako-blue">#宮古島キャンドル</span> をつけて投稿していただくと、
+            ハッシュタグ <a href="https://www.instagram.com/explore/tags/宮古島キャンドル/" target="_blank" rel="noopener noreferrer" className="font-semibold text-miyako-blue hover:underline">#宮古島キャンドル</a> をつけて投稿していただくと、
             <br className="hidden sm:block" />
             こちらのサイトでご紹介させていただくことも✨
           </p>
           <div className="flex flex-wrap justify-center gap-2">
-            <span className="px-3 py-1 bg-white/80 text-gray-700 text-sm rounded-full">
-              #宮古島キャンドル
-            </span>
+            <a href="https://www.instagram.com/explore/tags/宮古島キャンドル/" target="_blank" rel="noopener noreferrer" className="inline-block">
+              <span className="px-3 py-1 bg-white/80 text-gray-700 text-sm rounded-full hover:bg-white transition-colors cursor-pointer">
+                #宮古島キャンドル
+              </span>
+            </a>
             <span className="px-3 py-1 bg-white/80 text-gray-700 text-sm rounded-full">
               #ゆめかわキャンドル
             </span>
