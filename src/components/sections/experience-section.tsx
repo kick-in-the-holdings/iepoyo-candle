@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 import { AnimatedCard } from '@/components/ui/animated-card'
 import { GradientButton } from '@/components/ui/gradient-button'
@@ -106,9 +107,11 @@ const ExperienceSection = () => {
           <p className="text-gray-600 mb-6">
             手ぶらでOK！スタッフがしっかりサポートするので、初めての方でも安心です。
           </p>
-          <GradientButton size="lg" variant="accent">
-            体験プランの詳細を見る
-          </GradientButton>
+          <Link href="/experience">
+            <GradientButton size="lg" variant="accent">
+              体験プランの詳細を見る
+            </GradientButton>
+          </Link>
         </motion.div>
       </div>
     </section>
