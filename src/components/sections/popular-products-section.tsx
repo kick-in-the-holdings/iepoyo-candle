@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 import { AnimatedCard } from '@/components/ui/animated-card'
 import { Badge } from '@/components/ui/badge'
@@ -52,7 +52,7 @@ const PopularProductsSection = () => {
       price: '¥4,000',
       originalPrice: null,
       image:
-        'https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/309281a1-c74e-4922-49b5-c4fa71942600/square500',
+        'https://imagedelivery.net/NvrRuadp8jbz6w1RVQvxOg/251fe9e1-fb34-4c33-84df-648679b12c00/square500',
       badge: '人気',
       description:
         '円柱キャンドルは、宮古島の空や海みたいに幻想的。リラックス時間のおともにぴったりです🕯️🔮',
@@ -124,7 +124,6 @@ const PopularProductsSection = () => {
                     </span>
                   )}
                 </div>
-
               </div>
             </AnimatedCard>
           ))}
