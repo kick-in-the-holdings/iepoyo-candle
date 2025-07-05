@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 import { AnimatedCard } from '@/components/ui/animated-card'
@@ -78,9 +79,11 @@ const PopularProductsSection = () => {
             >
               {/* 商品画像エリア */}
               <div className="from-miyako-blue/20 to-soft-pink/20 relative mb-4 overflow-hidden rounded-lg bg-gradient-to-br">
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
+                  width={400}
+                  height={400}
                   className="aspect-square h-full w-full object-cover"
                 />
 

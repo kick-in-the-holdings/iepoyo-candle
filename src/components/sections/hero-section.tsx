@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 import { GradientButton } from '@/components/ui/gradient-button'
-import { IconInstagram } from '@/components/icons/icon-instagram'
-import { IconLine } from '@/components/icons/icon-line'
+// import { IconInstagram } from '@/components/icons/icon-instagram'
+// import { IconLine } from '@/components/icons/icon-line'
 
 const HeroSection = () => {
   return (

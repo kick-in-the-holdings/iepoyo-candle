@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import Gallery from 'react-photo-gallery'
+import Image from 'next/image'
+// import Gallery from 'react-photo-gallery'
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
 import Zoom from 'yet-another-react-lightbox/plugins/zoom'
@@ -127,7 +128,7 @@ export default function GalleryPage() {
   const [index, setIndex] = useState(-1)
 
   // Lightboxを開く
-  const handleClick = useCallback((event: any, obj: any) => {
+  const handleClick = useCallback((event: Event | null, obj: { index: number }) => {
     setIndex(obj.index)
   }, [])
 
@@ -153,9 +154,11 @@ export default function GalleryPage() {
                     className="cursor-pointer relative group"
                     onClick={() => handleClick(null, { index })}
                   >
-                    <img
+                    <Image
                       src={photo.src}
                       alt={photo.title}
+                      width={400}
+                      height={320}
                       className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg hover:opacity-90 transition-opacity duration-300"
                     />
                     {/* ホバー時の情報表示 */}
@@ -190,11 +193,14 @@ export default function GalleryPage() {
                 preload: 2
               }}
               render={{
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 slide: ({ slide }: any) => (
                   <div className="relative h-full w-full flex items-center justify-center">
-                    <img
+                    <Image
                       src={slide.src}
-                      alt={slide.title}
+                      alt={slide.title || 'Gallery image'}
+                      width={800}
+                      height={600}
                       className="max-h-full max-w-full object-contain"
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
