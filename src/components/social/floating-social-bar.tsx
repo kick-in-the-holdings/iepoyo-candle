@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { IconInstagram } from '../icons/icon-instagram'
 import { IconLine } from '../icons/icon-line'
+import { Chatbot } from '../chatbot/chatbot'
 
 interface SocialLink {
   id: string
@@ -40,8 +41,8 @@ export function FloatingSocialBar() {
 
   return (
     <>
-      {/* デスクトップ版 - 右上固定 */}
-      <div className="hidden md:block fixed right-4 top-20 z-40 space-y-4">
+      {/* デスクトップ版 - 右下固定、縦並び */}
+      <div className="hidden md:block fixed right-6 bottom-6 z-40 space-y-4">
         {socialLinks.map((social) => (
           <motion.div
             key={social.id}
@@ -87,11 +88,15 @@ export function FloatingSocialBar() {
             </motion.a>
           </motion.div>
         ))}
-
+        
+        {/* チャットボタンを最下部に追加 */}
+        <div className="mt-4">
+          <Chatbot />
+        </div>
       </div>
 
-      {/* モバイル版 - 右上固定 */}
-      <div className="md:hidden fixed right-4 top-24 z-40 space-y-4">
+      {/* モバイル版 - 右下固定、縦並び */}
+      <div className="md:hidden fixed right-4 bottom-6 z-40 space-y-4">
         {socialLinks.map((social, index) => (
           <motion.div
             key={social.id}
@@ -116,6 +121,11 @@ export function FloatingSocialBar() {
             </motion.a>
           </motion.div>
         ))}
+        
+        {/* チャットボタンをモバイル版にも追加 */}
+        <div className="mt-4">
+          <Chatbot />
+        </div>
       </div>
     </>
   )

@@ -1,6 +1,5 @@
 import { Footer } from './footer'
 import { Header } from './header'
-import { Chatbot } from '../chatbot/chatbot'
 import { FloatingSocialBar } from '../social/floating-social-bar'
 
 interface MainLayoutProps {
@@ -13,7 +12,6 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
-      <Chatbot />
       <FloatingSocialBar />
     </div>
   )

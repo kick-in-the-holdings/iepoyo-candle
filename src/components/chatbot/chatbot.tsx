@@ -144,7 +144,7 @@ export function Chatbot() {
     <>
       {/* チャットボットトグルボタン */}
       <motion.div
-        className="fixed bottom-6 right-6 z-50"
+        className="relative z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
