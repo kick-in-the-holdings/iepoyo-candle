@@ -126,10 +126,8 @@ function createJsonResponse(data, headers = {}) {
   const output = HtmlService.createHtmlOutput(JSON.stringify(data))
     .setMimeType(ContentService.MimeType.JSON);
   
-  // ヘッダーを設定
-  Object.keys(headers).forEach(key => {
-    output.addMetaTag('Cache-Control', 'no-cache');
-  });
+  // CORSヘッダーを設定
+  output.addMetaTag('Cache-Control', 'no-cache');
   
   return output;
 }
