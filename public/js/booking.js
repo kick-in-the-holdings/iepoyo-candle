@@ -444,7 +444,7 @@ function enableDebugMode() {
     loadAvailableDates();
 }
 
-// URLパラメータでデバッグモードを有効化、またはCORSエラー回避のため自動有効化
-if (window.location.search.includes('debug=true') || true) {
+// URLパラメータでデバッグモードを有効化
+if (window.location.search.includes('debug=true')) {
     enableDebugMode();
 }
