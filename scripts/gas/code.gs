@@ -27,25 +27,97 @@ const OPTION_ITEMS = [
 ];
 
 /**
- * Web Appのエントリーポイント（ルーティング機能付き）
+ * API エンドポイント（GET リクエスト用）
  */
 function doGet(e) {
-  // パラメータでページを判定
-  const page = e.parameter.page;
+  // CORS ヘッダーを設定
+  const response = {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+    }
+  };
   
-  if (page === 'booking') {
-    // 予約フォーム本体（iframe内で表示される）
-    return HtmlService.createHtmlOutputFromFile('index')
-      .setTitle('iepoyo candle 予約システム')
-      .addMetaTag('viewport', 'width=device-width, initial-scale=1')
-      .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
-  } else {
-    // デフォルト：iframeラッパーページ（警告バナー回避用）
-    return HtmlService.createHtmlOutputFromFile('wrapper')
-      .setTitle('iepoyo candle 予約システム')
-      .addMetaTag('viewport', 'width=device-width, initial-scale=1')
-      .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+  try {
+    const action = e.parameter.action;
+    
+    switch (action) {
+      case 'getAvailableDates':
+        const dates = getAvailableDates();
+        return createJsonResponse({ success: true, data: dates }, response.headers);
+        
+      case 'getTimeSlots':
+        const date = e.parameter.date;
+        if (!date) {
+          return createJsonResponse({ success: false, error: '日付が指定されていません' }, response.headers);
+        }
+        const slots = getAvailableTimeSlotsForDateAjax(date);
+        return createJsonResponse({ success: true, data: slots }, response.headers);
+        
+      default:
+        return createJsonResponse({ success: false, error: '無効なアクションです' }, response.headers);
+    }
+  } catch (error) {
+    console.error('doGet エラー:', error);
+    return createJsonResponse({ success: false, error: error.toString() }, response.headers);
   }
+}
+
+/**
+ * API エンドポイント（POST リクエスト用）
+ */
+function doPost(e) {
+  // CORS ヘッダーを設定
+  const headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  };
+  
+  try {
+    // リクエストボディを解析
+    const requestData = JSON.parse(e.postData.contents);
+    console.log('受信したデータ:', JSON.stringify(requestData));
+    
+    // 予約処理を実行
+    const result = processBooking(requestData);
+    
+    return createJsonResponse({ success: true, data: result }, headers);
+    
+  } catch (error) {
+    console.error('doPost エラー:', error);
+    return createJsonResponse({ success: false, error: error.toString() }, headers);
+  }
+}
+
+/**
+ * OPTIONS リクエスト用（CORS プリフライト）
+ */
+function doOptions(e) {
+  const headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  };
+  
+  return HtmlService.createHtmlOutput('')
+    .setHeaders(headers);
+}
+
+/**
+ * JSON レスポンスを作成するヘルパー関数
+ */
+function createJsonResponse(data, headers = {}) {
+  const output = HtmlService.createHtmlOutput(JSON.stringify(data))
+    .setMimeType(ContentService.MimeType.JSON);
+  
+  // ヘッダーを設定
+  Object.keys(headers).forEach(key => {
+    output.addMetaTag('Cache-Control', 'no-cache');
+  });
+  
+  return output;
 }
 
 /**

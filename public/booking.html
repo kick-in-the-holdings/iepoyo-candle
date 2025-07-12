@@ -3,115 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iepoyo candle 予約システム</title>
+    <title>iepoyo candle 予約システム - リダイレクト中</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html, body {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        }
-        
-        #bookingFrame {
-            width: 100%;
-            height: 100vh;
-            border: none;
-            display: block;
-        }
-        
-        .loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: white;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 9999;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
         }
         
-        .loading.hidden {
-            display: none;
+        .redirect-message {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
         }
         
         .spinner {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #ff6b6b;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid white;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
         }
         
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .manual-link {
+            color: white;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <div class="loading" id="loading">
+    <div class="redirect-message">
         <div class="spinner"></div>
+        <h1>iepoyo candle 予約システム</h1>
+        <p>新しい予約ページにリダイレクトしています...</p>
+        <p>
+            自動的にリダイレクトされない場合は
+            <a href="booking-form.html" class="manual-link">こちらをクリック</a>
+            してください。
+        </p>
     </div>
     
-    <iframe 
-        id="bookingFrame"
-        src="https://script.google.com/macros/s/AKfycbz0R2mjMWW02GbhHZUQpxWu8gUDX6RJHvK27iZ8zJOpWsQcVvSKRUvRAnalHsnP7H4/exec"
-        allow="*"
-        allowfullscreen>
-    </iframe>
-    
     <script>
-        const iframe = document.getElementById('bookingFrame');
-        const loading = document.getElementById('loading');
-        
-        iframe.onload = function() {
-            setTimeout(() => {
-                loading.classList.add('hidden');
-            }, 500);
-        };
-        
-        // タイムアウトでローディングを非表示
-        setTimeout(() => {
-            loading.classList.add('hidden');
-        }, 3000);
-        
-        // iframe内からのメッセージを受信
-        window.addEventListener('message', function(event) {
-            console.log('メッセージを受信:', event.data);
-            
-            // 予約完了メッセージの場合
-            if (event.data && event.data.type === 'bookingComplete') {
-                console.log('予約完了を検知');
-                
-                // thanks.htmlへリダイレクト
-                const bookingInfo = event.data.bookingInfo;
-                const thanksUrl = new URL('https://kick-in-the-holdings.github.io/iepoyo-candle/thanks.html');
-                
-                // URLパラメータを追加
-                thanksUrl.searchParams.append('date', bookingInfo.date);
-                thanksUrl.searchParams.append('time', bookingInfo.time);
-                thanksUrl.searchParams.append('name', bookingInfo.name);
-                thanksUrl.searchParams.append('participants', bookingInfo.participants);
-                thanksUrl.searchParams.append('menu', bookingInfo.menu);
-                thanksUrl.searchParams.append('total', bookingInfo.total);
-                
-                // リダイレクト実行
-                console.log('thanks.htmlへリダイレクト:', thanksUrl.toString());
-                window.location.href = thanksUrl.toString();
-            }
-        });
+        // 即座に新しいページにリダイレクト
+        window.location.replace('booking-form.html');
     </script>
 </body>
 </html>
