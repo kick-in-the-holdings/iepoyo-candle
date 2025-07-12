@@ -67,7 +67,7 @@
     
     <iframe 
         id="bookingFrame"
-        src="https://script.google.com/macros/s/AKfycbzfoH-TCGOLDlCZM2k8ZELzRgIjKP335g0DUXRZkFfdUh9En2vzjVpZulP4sibbpls/exec?page=booking"
+        src="https://script.google.com/macros/s/AKfycbyDafx9P7aVtbvxxdM4hr-EzaSI3KrwJfh2llGLcM5ZJ6DyW582g0xeM7CSJpFnGis/exec?page=booking"
         allow="*"
         allowfullscreen>
     </iframe>
@@ -86,6 +86,32 @@
         setTimeout(() => {
             loading.classList.add('hidden');
         }, 3000);
+        
+        // iframe内からのメッセージを受信
+        window.addEventListener('message', function(event) {
+            console.log('メッセージを受信:', event.data);
+            
+            // 予約完了メッセージの場合
+            if (event.data && event.data.type === 'bookingComplete') {
+                console.log('予約完了を検知');
+                
+                // thanks.htmlへリダイレクト
+                const bookingInfo = event.data.bookingInfo;
+                const thanksUrl = new URL('https://kick-in-the-holdings.github.io/iepoyo-candle/thanks.html');
+                
+                // URLパラメータを追加
+                thanksUrl.searchParams.append('date', bookingInfo.date);
+                thanksUrl.searchParams.append('time', bookingInfo.time);
+                thanksUrl.searchParams.append('name', bookingInfo.name);
+                thanksUrl.searchParams.append('participants', bookingInfo.participants);
+                thanksUrl.searchParams.append('menu', bookingInfo.menu);
+                thanksUrl.searchParams.append('total', bookingInfo.total);
+                
+                // リダイレクト実行
+                console.log('thanks.htmlへリダイレクト:', thanksUrl.toString());
+                window.location.href = thanksUrl.toString();
+            }
+        });
     </script>
 </body>
 </html>
