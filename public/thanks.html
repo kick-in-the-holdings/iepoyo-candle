@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ご予約ありがとうございます | iepoyo candle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .success-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .success-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: bounce 1s ease-in-out;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        h1 {
+            color: #ff6b6b;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .main-message {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .booking-info {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: left;
+            border: 2px solid #ff6b6b;
+            position: relative;
+        }
+        
+        .booking-info::before {
+            content: '📋';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 24px;
+        }
+        
+        .booking-info h2 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .booking-info p {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .email-warning {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .email-warning h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .email-warning p {
+            margin: 5px 0;
+            color: #856404;
+            font-size: 15px;
+        }
+        
+        .email-address {
+            background: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        
+        .social-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .social-section h2 {
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+            min-width: 200px;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .social-link.line {
+            background: #00B900;
+            color: white;
+        }
+        
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+        }
+        
+        .social-link.homepage {
+            background: #ff6b6b;
+            color: white;
+        }
+        
+        .final-message {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border: 1px solid #ffcccc;
+        }
+        
+        .final-message p {
+            color: #666;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-link {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-card">
+            <div class="success-icon">✅</div>
+            <h1>🎉 ご予約ありがとうございます！</h1>
+            <p class="main-message">
+                iepoyo candleでのキャンドル作り体験のご予約を<br>
+                確かに承りました。
+            </p>
+            
+            <div class="booking-info" id="bookingInfo">
+                <h2>ご予約内容</h2>
+                <p id="bookingDetails">予約情報を読み込んでいます...</p>
+            </div>
+            
+            <div class="email-warning">
+                <h3>📧 確認メールについて重要なお知らせ</h3>
+                <p>予約確認メールを送信しました。</p>
+                <p><strong>必ずご確認ください：</strong></p>
+                <p>✉️ メールが届かない場合は<strong>迷惑メールフォルダ</strong>をご確認ください</p>
+                <p>🗑️ <strong>ゴミ箱</strong>に振り分けられることもあります</p>
+                <p>📌 今後のために <span class="email-address">iepoyocandle@gmail.com</span> を連絡先に追加してください</p>
+            </div>
+            
+            <div class="social-section">
+                <h2>🕯️ iepoyo candleをもっと知る</h2>
+                <p>最新情報やキャンドル作品をチェック！<br>ぜひフォローしてください♪</p>
+                
+                <div class="social-links">
+                    <a href="https://lin.ee/k0N5obP" class="social-link line" target="_blank">
+                        📱 LINE公式アカウント
+                    </a>
+                    
+                    <a href="https://www.instagram.com/iepoyo.miyako/" class="social-link instagram" target="_blank">
+                        📸 Instagram
+                    </a>
+                    
+                    <a href="https://kick-in-the-holdings.github.io/iepoyo-candle/" class="social-link homepage" target="_blank">
+                        🏠 公式ホームページ
+                    </a>
+                </div>
+            </div>
+            
+            <div class="final-message">
+                <p>🕯️ <strong>当日のご案内</strong></p>
+                <p>・開始時刻の5分前までにお越しください</p>
+                <p>・エプロンは無料で貸し出しいたします</p>
+                <p>・作品は当日お持ち帰りいただけます</p>
+                <p>・お支払いは現地にて現金でお願いいたします</p>
+                <br>
+                <p style="font-size: 18px; text-align: center;">
+                    <strong>素敵なキャンドル作りの時間を<br>
+                    一緒に楽しみましょう！✨</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // URLパラメータから予約情報を取得
+        function getBookingInfo() {
+            const params = new URLSearchParams(window.location.search);
+            const bookingData = {
+                date: params.get('date') || '',
+                time: params.get('time') || '',
+                name: params.get('name') || '',
+                participants: params.get('participants') || '',
+                menu: params.get('menu') || '',
+                total: params.get('total') || ''
+            };
+            
+            if (bookingData.date && bookingData.name) {
+                const details = `
+                    <p><strong>日時:</strong> ${bookingData.date} ${bookingData.time}</p>
+                    <p><strong>お名前:</strong> ${bookingData.name}様</p>
+                    <p><strong>参加人数:</strong> ${bookingData.participants}名</p>
+                    <p><strong>メニュー:</strong> ${bookingData.menu}</p>
+                    <p style="font-size: 18px; font-weight: bold; color: #ff6b6b; margin-top: 15px;">
+                        <strong>合計金額:</strong> ¥${bookingData.total}
+                    </p>
+                `;
+                document.getElementById('bookingDetails').innerHTML = details;
+            } else {
+                // パラメータがない場合のデフォルトメッセージ
+                document.getElementById('bookingDetails').innerHTML = 
+                    '<p>予約確認メールをご確認ください。</p>';
+            }
+        }
+        
+        // ページ読み込み時に実行
+        window.onload = function() {
+            getBookingInfo();
+        };
+    </script>
+</body>
+</html>
