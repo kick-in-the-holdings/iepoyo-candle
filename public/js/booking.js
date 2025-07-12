@@ -2,7 +2,7 @@
 
 // 設定
 const CONFIG = {
-    GAS_API_URL: 'https://script.google.com/macros/s/AKfycbxgDgMbiNbomPR4PlnnU7gfnMq5kuV-Hikt6xoUceUWe74vobIR0H8HZFiyFlE5Cwc/exec',
+    GAS_API_URL: 'https://script.google.com/macros/s/AKfycbwmB1dqGVJZxR5CPvystGshx8P8YXLF72oYc70mzZbd74qR0dTNIolZaJsnUYS35eI/exec',
     TIME_SLOTS: [
         '11:00～12:30',
         '13:30～15:00', 

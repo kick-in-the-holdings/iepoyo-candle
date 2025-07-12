@@ -3,73 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iepoyo candle 予約システム - リダイレクト中</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        
-        .redirect-message {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .spinner {
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-top: 3px solid white;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        
-        p {
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-        
-        .manual-link {
-            color: white;
-            text-decoration: underline;
-        }
-    </style>
+    <title>iepoyo candle 予約フォーム</title>
+    <link rel="stylesheet" href="css/booking.css">
 </head>
 <body>
-    <div class="redirect-message">
-        <div class="spinner"></div>
-        <h1>iepoyo candle 予約システム</h1>
-        <p>新しい予約ページにリダイレクトしています...</p>
-        <p>
-            自動的にリダイレクトされない場合は
-            <a href="booking-form.html" class="manual-link">こちらをクリック</a>
-            してください。
-        </p>
+    <div class="container">
+        <div class="header">
+            <h1>iepoyo candle 予約フォーム</h1>
+            <p>手作りキャンドル体験のご予約</p>
+        </div>
+        
+        <div class="form-container">
+            <form id="bookingForm">
+                <!-- 連絡先情報 -->
+                <div class="section">
+                    <h2 class="section-title">連絡先情報</h2>
+                    
+                    <div class="form-group">
+                        <label for="name">代表者氏名 <span style="color: red;">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="help-text">ご予約代表者のお名前をフルネームでご記入ください</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span style="color: red;">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="help-text">予約確認メールをお送りします</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">電話番号 <span style="color: red;">*</span></label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}" required>
+                        <div class="help-text">ハイフンなしで入力してください（例：09012345678）</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="participants">参加人数 <span style="color: red;">*</span></label>
+                        <input type="number" id="participants" name="participants" min="1" max="10" required>
+                        <div class="help-text">体験される人数を入力してください</div>
+                    </div>
+                </div>
+                
+                <!-- 日時選択 -->
+                <div class="section">
+                    <h2 class="section-title">ご希望の日時</h2>
+                    
+                    <div class="form-group">
+                        <label>日付を選択 <span style="color: red;">*</span></label>
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <button type="button" class="calendar-nav" id="prevMonth">&lt;</button>
+                                <div class="calendar-month" id="currentMonth">2024年12月</div>
+                                <button type="button" class="calendar-nav" id="nextMonth">&gt;</button>
+                            </div>
+                            <div class="calendar-grid" id="calendar">
+                                <!-- カレンダーはJavaScriptで生成 -->
+                            </div>
+                        </div>
+                        <input type="hidden" id="selectedDate" name="selectedDate" required>
+                    </div>
+                    
+                    <div class="form-group" id="timeSlotGroup" style="display: none;">
+                        <label>時間帯を選択 <span style="color: red;">*</span></label>
+                        <div class="time-slots" id="timeSlots">
+                            <!-- 時間帯はJavaScriptで生成 -->
+                        </div>
+                        <input type="hidden" id="selectedTime" name="selectedTime" required>
+                    </div>
+                </div>
+                
+                <!-- メニュー選択 -->
+                <div class="section">
+                    <h2 class="section-title">メニュー選択</h2>
+                    
+                    <div class="form-group">
+                        <label>体験メニュー <span style="color: red;">*</span></label>
+                        <div class="menu-grid" id="menuItems">
+                            <!-- メニューはJavaScriptで生成 -->
+                        </div>
+                        <input type="hidden" id="selectedMenu" name="selectedMenu" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>オプション（複数選択可）</label>
+                        <div class="option-grid" id="optionItems">
+                            <!-- オプションはJavaScriptで生成 -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 備考 -->
+                <div class="section">
+                    <h2 class="section-title">その他</h2>
+                    
+                    <div class="form-group">
+                        <label for="remarks">備考・ご要望</label>
+                        <textarea id="remarks" name="remarks" rows="4"></textarea>
+                        <div class="help-text">その他ご要望などがございましたらご記入ください</div>
+                    </div>
+                </div>
+                
+                <!-- 送信ボタン -->
+                <button type="submit" class="submit-button" id="submitButton">予約を確定する</button>
+                
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>予約を処理しています...</p>
+                </div>
+            </form>
+        </div>
     </div>
     
-    <script>
-        // 即座に新しいページにリダイレクト
-        window.location.replace('booking-form.html');
-    </script>
+    <script src="js/booking.js"></script>
 </body>
 </html>

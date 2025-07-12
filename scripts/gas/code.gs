@@ -42,6 +42,20 @@ function doGet(e) {
   try {
     const action = e.parameter.action;
     
+    // actionパラメータがない場合は、APIの説明を返す
+    if (!action) {
+      return createJsonResponse({ 
+        success: false, 
+        error: 'actionパラメータが必要です',
+        available_actions: ['getAvailableDates', 'getTimeSlots'],
+        usage: {
+          getAvailableDates: 'GET ?action=getAvailableDates',
+          getTimeSlots: 'GET ?action=getTimeSlots&date=YYYY-MM-DD',
+          booking: 'POST with booking data'
+        }
+      }, response.headers);
+    }
+    
     switch (action) {
       case 'getAvailableDates':
         const dates = getAvailableDates();
@@ -56,7 +70,7 @@ function doGet(e) {
         return createJsonResponse({ success: true, data: slots }, response.headers);
         
       default:
-        return createJsonResponse({ success: false, error: '無効なアクションです' }, response.headers);
+        return createJsonResponse({ success: false, error: '無効なアクションです: ' + action }, response.headers);
     }
   } catch (error) {
     console.error('doGet エラー:', error);
@@ -120,22 +134,6 @@ function createJsonResponse(data, headers = {}) {
   return output;
 }
 
-/**
- * 別の方法：2つの関数で分ける場合
- */
-function doGetWrapper() {
-  // ラッパーページ専用の関数
-  return HtmlService.createHtmlOutputFromFile('wrapper')
-    .setTitle('iepoyo candle 予約システム')
-    .addMetaTag('viewport', 'width=device-width, initial-scale=1');
-}
-
-function doGetBooking() {
-  // 予約フォーム専用の関数
-  return HtmlService.createHtmlOutputFromFile('index')
-    .setTitle('iepoyo candle 予約フォーム')
-    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
-}
 
 /**
  * 利用可能な日付を取得（14日分）
