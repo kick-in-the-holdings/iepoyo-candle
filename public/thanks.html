@@ -277,6 +277,8 @@
                 total: params.get('total') || ''
             };
             
+            console.log('受信した予約データ:', bookingData);
+            
             if (bookingData.date && bookingData.name) {
                 const details = `
                     <p><strong>日時:</strong> ${bookingData.date} ${bookingData.time}</p>
