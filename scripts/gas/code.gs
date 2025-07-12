@@ -30,21 +30,15 @@ const OPTION_ITEMS = [
  * API エンドポイント（GET リクエスト用）
  */
 function doGet(e) {
-  // CORS ヘッダーを設定
-  const response = {
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    }
-  };
-  
   try {
     const action = e.parameter.action;
+    const callback = e.parameter.callback; // JSONP用のコールバック
+    
+    let responseData;
     
     // actionパラメータがない場合は、APIの説明を返す
     if (!action) {
-      return createJsonResponse({ 
+      responseData = { 
         success: false, 
         error: 'actionパラメータが必要です',
         available_actions: ['getAvailableDates', 'getTimeSlots'],
@@ -53,28 +47,45 @@ function doGet(e) {
           getTimeSlots: 'GET ?action=getTimeSlots&date=YYYY-MM-DD',
           booking: 'POST with booking data'
         }
-      }, response.headers);
+      };
+    } else {
+      switch (action) {
+        case 'getAvailableDates':
+          const dates = getAvailableDates();
+          responseData = { success: true, data: dates };
+          break;
+          
+        case 'getTimeSlots':
+          const date = e.parameter.date;
+          if (!date) {
+            responseData = { success: false, error: '日付が指定されていません' };
+          } else {
+            const slots = getAvailableTimeSlotsForDateAjax(date);
+            responseData = { success: true, data: slots };
+          }
+          break;
+          
+        default:
+          responseData = { success: false, error: '無効なアクションです: ' + action };
+      }
     }
     
-    switch (action) {
-      case 'getAvailableDates':
-        const dates = getAvailableDates();
-        return createJsonResponse({ success: true, data: dates }, response.headers);
-        
-      case 'getTimeSlots':
-        const date = e.parameter.date;
-        if (!date) {
-          return createJsonResponse({ success: false, error: '日付が指定されていません' }, response.headers);
-        }
-        const slots = getAvailableTimeSlotsForDateAjax(date);
-        return createJsonResponse({ success: true, data: slots }, response.headers);
-        
-      default:
-        return createJsonResponse({ success: false, error: '無効なアクションです: ' + action }, response.headers);
+    // JSONP形式またはJSON形式でレスポンスを返す
+    if (callback) {
+      return createJsonpResponse(responseData, callback);
+    } else {
+      return createCorsResponse(responseData);
     }
+    
   } catch (error) {
     console.error('doGet エラー:', error);
-    return createJsonResponse({ success: false, error: error.toString() }, response.headers);
+    const errorResponse = { success: false, error: error.toString() };
+    
+    if (e.parameter.callback) {
+      return createJsonpResponse(errorResponse, e.parameter.callback);
+    } else {
+      return createCorsResponse(errorResponse);
+    }
   }
 }
 
@@ -82,13 +93,6 @@ function doGet(e) {
  * API エンドポイント（POST リクエスト用）
  */
 function doPost(e) {
-  // CORS ヘッダーを設定
-  const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-  };
-  
   try {
     // リクエストボディを解析
     const requestData = JSON.parse(e.postData.contents);
@@ -97,37 +101,37 @@ function doPost(e) {
     // 予約処理を実行
     const result = processBooking(requestData);
     
-    return createJsonResponse({ success: true, data: result }, headers);
+    return createCorsResponse({ success: true, data: result });
     
   } catch (error) {
     console.error('doPost エラー:', error);
-    return createJsonResponse({ success: false, error: error.toString() }, headers);
+    return createCorsResponse({ success: false, error: error.toString() });
   }
 }
 
 /**
- * OPTIONS リクエスト用（CORS プリフライト）
+ * CORS対応のレスポンスを作成するヘルパー関数
  */
-function doOptions(e) {
-  const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-  };
+function createCorsResponse(data) {
+  const jsonString = JSON.stringify(data);
   
-  return HtmlService.createHtmlOutput('')
-    .setHeaders(headers);
+  // ContentServiceを使用してJSON形式のレスポンスを作成
+  const output = ContentService.createTextOutput(jsonString);
+  output.setMimeType(ContentService.MimeType.JSON);
+  
+  return output;
 }
 
 /**
- * JSON レスポンスを作成するヘルパー関数
+ * JSONP形式のレスポンスを作成するヘルパー関数
  */
-function createJsonResponse(data, headers = {}) {
-  const output = HtmlService.createHtmlOutput(JSON.stringify(data))
-    .setMimeType(ContentService.MimeType.JSON);
+function createJsonpResponse(data, callback) {
+  const jsonString = JSON.stringify(data);
+  const jsonpString = `${callback}(${jsonString})`;
   
-  // CORSヘッダーを設定
-  output.addMetaTag('Cache-Control', 'no-cache');
+  // ContentServiceを使用してJSONP形式のレスポンスを作成
+  const output = ContentService.createTextOutput(jsonpString);
+  output.setMimeType(ContentService.MimeType.JAVASCRIPT);
   
   return output;
 }
